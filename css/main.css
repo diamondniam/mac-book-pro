@@ -306,7 +306,7 @@
 }
 
 .section .placeholder:nth-child(1) {
-  background-image: url("/img/side_left__curm9wcfx2wm_large_2x.jpg"), url("/img/side_right__s9xdj737o2ai_large_2x.jpg");
+  background-image: url("../img/side_left__curm9wcfx2wm_large_2x.jpg"), url("../img/side_right__s9xdj737o2ai_large_2x.jpg");
   background-size: 70%, 70%;
   background-repeat: no-repeat;
   background-position: -20% 40%, 120% 60%;
@@ -369,7 +369,7 @@
 .section .placeholder:nth-child(2) .mac {
   margin: 40px 0;
   width: 55%;
-  background: url("/img/graphics_screen_endframe__bin7avhv5lci_large_2x.jpg");
+  background: url("../img/graphics_screen_endframe__bin7avhv5lci_large_2x.jpg");
   background-size: 83%;
   background-position: center 15%;
   background-repeat: no-repeat;
@@ -379,7 +379,7 @@
   content: "";
   position: absolute;
   left: 20px;
-  background: url("/img/graphics_screen_endframe__bin7avhv5lci_large_2x.jpg");
+  background: url("../img/graphics_screen_endframe__bin7avhv5lci_large_2x.jpg");
 }
 .section .placeholder:nth-child(2) .text {
   font-size: 20px;
@@ -408,7 +408,7 @@
 .section .placeholder:nth-child(3) {
   margin-bottom: 50px;
   width: 100%;
-  background: url("/img/scene.jpg");
+  background: url("../img/scene.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -480,7 +480,7 @@
 }
 .section .placeholder:nth-child(4) .mac {
   margin: 40px 0;
-  background: url("/img/retina_hero_screen__33bifaqqnv6e_large_2x.jpg");
+  background: url("../img/retina_hero_screen__33bifaqqnv6e_large_2x.jpg");
   background-size: 83%;
   background-position: center 40%;
   background-repeat: no-repeat;
