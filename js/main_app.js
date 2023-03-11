@@ -1,6 +1,6 @@
 // imports
 import { 
-  nav_hover, nav_search_cancel_function, nav_search_click_function
+  nav_hover, nav_search_cancel_function, nav_search_click_function, nav_burger_click_function, mobile_nav_hover
 } from "./nav_functions.js"
 
 import { 
@@ -31,6 +31,19 @@ const nav_search = nav.querySelector('.search-icon'),
 nav_hover()
 nav_search_click_function()
 nav_search_cancel_function()
+
+// mobile_nav
+const mobile_nav = document.querySelector('.mobile-nav'),
+      mobile_nav_links = mobile_nav.querySelectorAll('.link'), mobile_nav_input = mobile_nav.querySelector('.input')
+
+const nav_burger = nav.querySelector('.burger'),
+      nav_burger_spans = nav_burger.querySelectorAll('span')
+
+mobile_nav_hover()
+
+nav_burger.onclick = () => {
+  nav_burger_click_function()
+}
 
 // header
 const header = document.querySelector('.header'),
@@ -111,5 +124,6 @@ window.onscroll = () => {
 // exports
 export { 
   body, html, 
-  nav, nav_elements, nav_search_cancel, nav_search_input, nav_search
+  nav, nav_elements, nav_search_cancel, nav_search_input, nav_search, 
+  mobile_nav, mobile_nav_links, nav_burger, mobile_nav_input, nav_burger_spans
 }

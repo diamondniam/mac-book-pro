@@ -157,7 +157,8 @@
   transition: height 0.4s, visibility 0.4s, padding 0.4s, opacity 0.2s;
 }
 .mobile-nav .link {
-  transition: opacity 0.4s;
+  cursor: pointer;
+  transition: opacity 0.4s, border 0.2s;
   opacity: 0.7;
   padding: 10px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -179,7 +180,6 @@
   transition: opacity 0.4s;
 }
 .mobile-nav .input .search {
-  filter: invert(100);
   background-color: inherit;
   background-size: 25px;
   background-position: center left;
@@ -197,9 +197,10 @@
   opacity: 0.6;
 }
 .mobile-nav .input .search-icon {
+  filter: invert(100);
   margin-left: 20px;
   width: 25px;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .nav-fixed {
