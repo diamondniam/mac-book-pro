@@ -911,8 +911,32 @@
   .section .placeholder:nth-child(6) .model.one .cpu.two .line, .section .placeholder:nth-child(6) .model.two .cpu.two .line {
     width: 55%;
   }
+  .footer .footer-nav {
+    margin-top: 20px;
+  }
+  .footer .footer-nav .logo {
+    height: 20px;
+    width: 20px;
+  }
+  .footer .footer-nav .link .arrow {
+    margin-top: 0;
+  }
+  .footer .footer-nav .link .tab {
+    margin-top: 0;
+    font-size: 10px;
+  }
+  .footer .country {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .footer .rights {
+    font-size: 10px;
+  }
 }
 @media screen and (max-width: 500px) {
+  .header .title {
+    font-size: 35px;
+  }
   .section .placeholder:nth-child(3) .feature:nth-child(1) h1, .section .placeholder:nth-child(3) .feature:nth-child(2) h1, .section .placeholder:nth-child(3) .feature:nth-child(3) h1, .section .placeholder:nth-child(3) .feature:nth-child(4) h1, .section .placeholder:nth-child(3) .feature:nth-child(5) h1 {
     font-size: 25px;
   }
