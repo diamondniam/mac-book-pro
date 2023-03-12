@@ -12,8 +12,8 @@ placeholder_5_values.forEach(value => {
 })
 
 const placeholder_5_apps = [
-  { placeholder_5_xcode          : [3.7, 3.7, 2.1, 2.1] },
-  { placeholder_5_logic_pro      : [3.0, 3.0, 1.7, 1.7] },
+  { placeholder_5_xcode : [3.7, 3.7, 2.1, 2.1] },
+  { placeholder_5_logic_pro : [3.0, 3.0, 1.7, 1.7] },
   { placeholder_5_affinity_photo : [2.4, 2.4, 1.7, 1.7] }
 ]
 
@@ -48,12 +48,12 @@ function placeholder_5_function() {
 }
 
 // placeholder_6
-const placeholder_6          = document.querySelector('.placeholder:nth-child(6)'),
+const placeholder_6 = document.querySelector('.placeholder:nth-child(6)'),
       placeholder_6_app_list = placeholder_6.querySelectorAll('.app-list .app'),
-      placeholder_6_values   = placeholder_6.querySelectorAll('.index .value')
+      placeholder_6_values = placeholder_6.querySelectorAll('.index .value')
 
-const placeholder_6_lines             = placeholder_6.querySelectorAll('.index .line'),
-      placeholder_6_long_lines_width  = getComputedStyle(placeholder_6_lines[0]).getPropertyValue('width'),
+const placeholder_6_lines = placeholder_6.querySelectorAll('.index .line'),
+      placeholder_6_long_lines_width = getComputedStyle(placeholder_6_lines[0]).getPropertyValue('width'),
       placeholder_6_short_lines_width = getComputedStyle(placeholder_6_lines[1]).getPropertyValue('width')
 
 placeholder_lines_default(placeholder_6_lines)
@@ -65,9 +65,9 @@ placeholder_6_values.forEach(value => {
 let placeholder_6_current_values = [13.4, 9.4, 2.9 , 1.7]
 
 const placeholder_6_apps = [
-  { placeholder_6_final_cut       : [13.4, 9.4, 2.9 , 1.7] },
+  { placeholder_6_final_cut : [13.4, 9.4, 2.9 , 1.7] },
   { placeholder_6_adobe_photoshop : [3.5, 3.3, 2.1, 2.0] },
-  { placeholder_6_affinity_photo  : [8.5, 5.6, 4.5, 2.9] }
+  { placeholder_6_affinity_photo : [8.5, 5.6, 4.5, 2.9] }
 ]
 
 placeholder_6_app_list.forEach((app, index) => {
