@@ -1,6 +1,6 @@
 // imports
 import { 
-  nav_hover, nav_search_cancel_function, nav_search_click_function, nav_burger_click_function, mobile_nav_hover
+  nav_hover, nav_search_cancel_function, nav_search_click_function
 } from "./nav_functions.js"
 
 import { 
@@ -21,38 +21,25 @@ const body = document.body,
       html = document.documentElement
 
 // nav
-const nav = document.querySelector('.nav'),
+const nav          = document.querySelector('.nav'),
       nav_elements = nav.querySelectorAll('.nav > *')
 
-const nav_search = nav.querySelector('.search-icon'),
-      nav_search_input = document.querySelector('.input'),
+const nav_search        = nav.querySelector('.search-icon'),
+      nav_search_input  = document.querySelector('.input'),
       nav_search_cancel = nav_search_input.querySelector('.cancel')
 
 nav_hover()
 nav_search_click_function()
 nav_search_cancel_function()
 
-// mobile_nav
-const mobile_nav = document.querySelector('.mobile-nav'),
-      mobile_nav_links = mobile_nav.querySelectorAll('.link'), mobile_nav_input = mobile_nav.querySelector('.input')
-
-const nav_burger = nav.querySelector('.burger'),
-      nav_burger_spans = nav_burger.querySelectorAll('span')
-
-mobile_nav_hover()
-
-nav_burger.onclick = () => {
-  nav_burger_click_function()
-}
-
 // header
-const header = document.querySelector('.header'),
+const header         = document.querySelector('.header'),
       header_product = header.querySelector('.product')
 
 header_product.style.opacity = '0'
 
 setTimeout(() => {
-  header_product.style.opacity = '1'
+  header_product.style.opacity    = '1'
   header_product.style.transition = 'opacity .4s'
 }, 1000)
 
@@ -124,6 +111,5 @@ window.onscroll = () => {
 // exports
 export { 
   body, html, 
-  nav, nav_elements, nav_search_cancel, nav_search_input, nav_search, 
-  mobile_nav, mobile_nav_links, nav_burger, mobile_nav_input, nav_burger_spans
+  nav, nav_elements, nav_search_cancel, nav_search_input, nav_search
 }
