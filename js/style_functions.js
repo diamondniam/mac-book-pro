@@ -1,7 +1,7 @@
 // nav_fixed
 const nav_fixed = document.querySelector('.nav-fixed'),
-      nav_fixed_model = nav_fixed.querySelector('.model'),
-      nav_fixed_product = nav_fixed.querySelector('.product')
+  nav_fixed_model = nav_fixed.querySelector('.model'),
+  nav_fixed_product = nav_fixed.querySelector('.product')
 
 function nav_fixed_function() {
   nav_fixed.style.background = 'rgba(20, 20, 20, 0.666)'
@@ -20,17 +20,17 @@ function nav_fixed_function_reverse() {
 // placeholder_1
 const placeholder_1 = document.querySelector('.placeholder:nth-child(1)')
 
-      placeholder_1.style.backgroundPosition = '-200% 40%, 320% 60%'
+placeholder_1.style.backgroundPosition = '-200% 40%, 320% 60%'
 
 const placeholder_1_feature_1 = placeholder_1.querySelector('.feature.one'),
-      placeholder_1_feature_2 = placeholder_1.querySelector('.feature.two'),
-      placeholder_1_feature_3 = placeholder_1.querySelector('.feature.three'),
-      placeholder_1_feature_4 = placeholder_1.querySelector('.feature.four')
+  placeholder_1_feature_2 = placeholder_1.querySelector('.feature.two'),
+  placeholder_1_feature_3 = placeholder_1.querySelector('.feature.three'),
+  placeholder_1_feature_4 = placeholder_1.querySelector('.feature.four')
 
-      placeholder_1_feature_1.style.left = '-100%'
-      placeholder_1_feature_2.style.right = '-100%'
-      placeholder_1_feature_3.style.left = '-100%'
-      placeholder_1_feature_4.style.right = '-100%'
+placeholder_1_feature_1.style.left = '-100%'
+placeholder_1_feature_2.style.right = '-100%'
+placeholder_1_feature_3.style.left = '-100%'
+placeholder_1_feature_4.style.right = '-100%'
 
 function placeholder_1_function() {
   placeholder_1.style.backgroundPosition = '-30% 40%, 130% 60%'
@@ -46,7 +46,7 @@ function placeholder_1_function() {
 
 // placeholder_2
 const placeholder_2 = document.querySelector('.placeholder:nth-child(2)'),
-      placeholder_2_text = placeholder_2.querySelector('.text')
+  placeholder_2_text = placeholder_2.querySelector('.text')
 
 placeholder_2_text.style.opacity = '0'
 
@@ -57,32 +57,44 @@ function placeholder_2_function() {
 
 // placeholder_3
 const placeholder_3 = document.querySelector('.placeholder:nth-child(3)'),
-      placeholder_3_features = placeholder_3.querySelectorAll('.feature h1')
+  placeholder_3_features_h1 = placeholder_3.querySelectorAll('.feature h1'),
+  placeholder_3_features = placeholder_3.querySelectorAll('.feature'),
+  placeholder_3_features_lines = placeholder_3.querySelectorAll('.feature .line')
 
-const placeholder_3_feature_1 = placeholder_3.querySelector('.feature.one h1'),
-      placeholder_3_feature_2 = placeholder_3.querySelector('.feature.two h1'),
-      placeholder_3_feature_3 = placeholder_3.querySelector('.feature.three h1'),
-      placeholder_3_feature_4 = placeholder_3.querySelector('.feature.four h1'),
-      placeholder_3_feature_5 = placeholder_3.querySelector('.feature.five h1')
+const placeholder_3_feature_1_h1 = placeholder_3.querySelector('.feature.one h1'),
+  placeholder_3_feature_2_h1 = placeholder_3.querySelector('.feature.two h1'),
+  placeholder_3_feature_3_h1 = placeholder_3.querySelector('.feature.three h1'),
+  placeholder_3_feature_4_h1 = placeholder_3.querySelector('.feature.four h1'),
+  placeholder_3_feature_5_h1 = placeholder_3.querySelector('.feature.five h1')
 
-placeholder_3_features.forEach(feature => {
-  feature.style.transform = 'translateY(200px)'
-})
-
+// placeholder_3_function
 function placeholder_3_function() {
-  placeholder_3_features.forEach(feature => {
+  placeholder_3_features_h1.forEach(feature => {
     feature.style.transform = 'none'
   })
-  placeholder_3_feature_1.style.transition = 'transform .4s'
-  placeholder_3_feature_2.style.transition = 'transform .5s'
-  placeholder_3_feature_3.style.transition = 'transform .7s'
-  placeholder_3_feature_4.style.transition = 'transform .6s'
-  placeholder_3_feature_5.style.transition = 'transform .45s'
+  placeholder_3_features.forEach(feature => {
+    feature.style.opacity = '1'
+  })
+  placeholder_3_features_lines.forEach(line => {
+    line.style.width = '30%'
+  })
+
+  placeholder_3_features_lines[0].style.transition = 'width .4s'
+  placeholder_3_features_lines[1].style.transition = 'width .5s'
+  placeholder_3_features_lines[2].style.transition = 'width .7s'
+  placeholder_3_features_lines[3].style.transition = 'width .3s'
+  placeholder_3_features_lines[4].style.transition = 'width .6s'
+
+  placeholder_3_feature_1_h1.style.transition = 'transform .4s'
+  placeholder_3_feature_2_h1.style.transition = 'transform .5s'
+  placeholder_3_feature_3_h1.style.transition = 'transform .7s'
+  placeholder_3_feature_4_h1.style.transition = 'transform .6s'
+  placeholder_3_feature_5_h1.style.transition = 'transform .45s'
 }
 
 // placeholder_4
-const placeholder_4 = document.querySelector('.placeholder:nth-child(4)'), 
-      placeholder_4_text = placeholder_4.querySelector('.text')
+const placeholder_4 = document.querySelector('.placeholder:nth-child(4)'),
+  placeholder_4_text = placeholder_4.querySelector('.text')
 
 placeholder_4_text.style.opacity = '0'
 
@@ -91,12 +103,11 @@ function placeholder_4_function() {
   placeholder_4_text.style.transition = 'opacity .4s'
 }
 
-
 // exports
-export { 
+export {
   nav_fixed, nav_fixed_function, nav_fixed_function_reverse,
-  placeholder_1, placeholder_1_function, 
+  placeholder_1, placeholder_1_function,
   placeholder_2, placeholder_2_text, placeholder_2_function,
-  placeholder_3, placeholder_3_function,
+  placeholder_3, placeholder_3_function, placeholder_3_features_h1,
   placeholder_4, placeholder_4_text, placeholder_4_function
 }
