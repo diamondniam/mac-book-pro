@@ -3,7 +3,7 @@ import {
   body,
   nav, nav_elements, nav_search_input,
   nav_search, nav_search_cancel,
-  mobile_nav, mobile_nav_links, mobile_nav_input, nav_burger, nav_burger_spans
+  mobile_nav, mobile_nav_links, mobile_nav_input, nav_burger, nav_burger_spans, html
 } from "./main_app.js"
 
 // nav_animations
@@ -184,12 +184,14 @@ function nav_search_click_function() {
 
 // scroll_lock & scroll_enable
 function scroll_lock() {
-  window.onscroll = function () {
-    window.scrollTo(0, 0)
-  }
+  document.querySelector('.container').style.height = '100vh'
+  document.querySelector('.container').style.overflow = 'hidden'
+  body.style.overflow = 'scroll'
 }
 function scroll_enable() {
-  window.onscroll = function () { }
+  document.querySelector('.container').style.height = 'auto'
+  document.querySelector('.container').style.overflow = 'none'
+  body.style.overflow = 'scroll'
 }
 
 function mobile_scroll_lock() {
