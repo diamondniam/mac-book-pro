@@ -154,16 +154,19 @@
   background-color: black;
   font-size: 20px;
   font-weight: 300;
-  transition: height 0.4s, visibility 0.4s, padding 0.4s, opacity 0.2s;
+  transition: height 0.4s, visibility 0.4s, padding 0.4s, opacity 0.4s;
 }
 .mobile-nav .link {
+<<<<<<< HEAD
   transition: opacity 0.4s;
+=======
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s, border 0.2s;
+>>>>>>> dev
   opacity: 0.7;
   padding: 10px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-.mobile-nav .link a {
-  color: white;
 }
 .mobile-nav .input {
   width: 100%;
@@ -245,6 +248,7 @@
   flex-direction: column;
   width: 80%;
   margin: 0 auto;
+  margin-top: 50px;
   text-align: center;
   overflow: hidden;
 }
@@ -398,17 +402,28 @@
   color: #000000;
   background-color: white;
   margin-bottom: 50px;
-  transition: all 0.2s;
+  transition: all 0.4s;
+}
+.section .placeholder:nth-child(2) .more a {
+  color: black;
+  transition: all 0.4s;
 }
 .section .placeholder:nth-child(2) .more:hover {
   border: 3px solid white;
-  color: #ffffff;
   background-color: black;
+}
+.section .placeholder:nth-child(2) .more:hover a {
+  color: white;
 }
 .section .placeholder:nth-child(3) {
   margin-bottom: 50px;
   width: 100%;
+<<<<<<< HEAD
   background: url("/img/scene.jpg");
+=======
+  background: url("../img/scene.jpg");
+  background-color: #000000;
+>>>>>>> dev
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -423,8 +438,8 @@
 }
 .section .placeholder:nth-child(3) .feature {
   width: 25%;
-  color: white;
   position: absolute;
+  color: white;
 }
 .section .placeholder:nth-child(3) .feature .line {
   margin-bottom: 20px;
@@ -435,6 +450,8 @@
 }
 .section .placeholder:nth-child(3) .feature:nth-child(1), .section .placeholder:nth-child(3) .feature:nth-child(2), .section .placeholder:nth-child(3) .feature:nth-child(3), .section .placeholder:nth-child(3) .feature:nth-child(4), .section .placeholder:nth-child(3) .feature:nth-child(5) {
   overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.6s;
 }
 .section .placeholder:nth-child(3) .feature:nth-child(1) h1, .section .placeholder:nth-child(3) .feature:nth-child(2) h1, .section .placeholder:nth-child(3) .feature:nth-child(3) h1, .section .placeholder:nth-child(3) .feature:nth-child(4) h1, .section .placeholder:nth-child(3) .feature:nth-child(5) h1 {
   font-size: 28px;
@@ -655,7 +672,7 @@
     width: 100%;
   }
   .header .title {
-    font-size: 100px;
+    font-size: 120px;
     width: 80%;
   }
   .header .text {
@@ -824,9 +841,18 @@
   .header .product {
     width: 140%;
   }
+  .header .title {
+    margin-bottom: 15px;
+  }
   .header .text {
     display: none;
     font-size: 20px;
+  }
+  .header .presentation {
+    margin-bottom: 10px;
+  }
+  .header .presentation, .header .video {
+    font-size: 17px;
   }
   .section .placeholder:nth-child(1) .feature {
     font-size: 12px;
@@ -855,13 +881,14 @@
   .section .placeholder:nth-child(3) {
     flex-direction: column;
     height: 100%;
+    background-image: none;
   }
   .section .placeholder:nth-child(3) .feature {
     width: 60%;
   }
   .section .placeholder:nth-child(3) .feature:nth-child(1), .section .placeholder:nth-child(3) .feature:nth-child(2), .section .placeholder:nth-child(3) .feature:nth-child(3), .section .placeholder:nth-child(3) .feature:nth-child(4), .section .placeholder:nth-child(3) .feature:nth-child(5) {
     position: static;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   .section .placeholder:nth-child(3) .feature:nth-child(1) h1, .section .placeholder:nth-child(3) .feature:nth-child(2) h1, .section .placeholder:nth-child(3) .feature:nth-child(3) h1, .section .placeholder:nth-child(3) .feature:nth-child(4) h1, .section .placeholder:nth-child(3) .feature:nth-child(5) h1 {
     font-size: 30px;
@@ -899,6 +926,15 @@
   }
 }
 @media screen and (max-width: 650px) {
+  .mobile-nav .link {
+    padding: 7px 0;
+  }
+  .mobile-nav .input {
+    margin-bottom: 10px;
+  }
+  .section .placeholder:nth-child(5), .section .placeholder:nth-child(6) {
+    width: 80%;
+  }
   .section .placeholder:nth-child(5) .models .model .cpu .index .value, .section .placeholder:nth-child(6) .models .model .cpu .index .value {
     font-size: 45px;
   }
@@ -913,14 +949,20 @@
   }
 }
 @media screen and (max-width: 500px) {
+<<<<<<< HEAD
+=======
+  .header .title {
+    font-size: 35px;
+  }
+  .mobile-nav .link {
+    font-size: 17px;
+  }
+>>>>>>> dev
   .section .placeholder:nth-child(3) .feature:nth-child(1) h1, .section .placeholder:nth-child(3) .feature:nth-child(2) h1, .section .placeholder:nth-child(3) .feature:nth-child(3) h1, .section .placeholder:nth-child(3) .feature:nth-child(4) h1, .section .placeholder:nth-child(3) .feature:nth-child(5) h1 {
     font-size: 25px;
   }
   .section .placeholder:nth-child(3) .feature .line {
     height: 3px;
-  }
-  .section .placeholder:nth-child(5), .section .placeholder:nth-child(6) {
-    width: 80%;
   }
   .section .placeholder:nth-child(5) .graph-title, .section .placeholder:nth-child(6) .graph-title {
     font-size: 25px;

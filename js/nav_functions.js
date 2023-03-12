@@ -1,8 +1,14 @@
 // imports
-import { 
+import {
   body,
+<<<<<<< HEAD
   nav, nav_elements, nav_search_input, 
   nav_search, nav_search_cancel
+=======
+  nav, nav_elements, nav_search_input,
+  nav_search, nav_search_cancel,
+  mobile_nav, mobile_nav_links, mobile_nav_input, nav_burger, nav_burger_spans, html
+>>>>>>> dev
 } from "./main_app.js"
 
 // nav_animations
@@ -15,7 +21,7 @@ function nav_elements_hide() {
     nav_search_input.style.marginLeft = '0px'
     nav_search_input.style.visibility = 'visible'
   }, 200)
-  
+
   nav_elements.forEach((element, index) => {
     setTimeout(() => {
       if (index_reverse >= 0) {
@@ -52,16 +58,17 @@ function nav_search_click_out() {
     let target = e.target
 
     if (
-      target !== nav_search_input.querySelector('.search')      &&
+      target !== nav_search_input.querySelector('.search') &&
       target !== nav_search_input.querySelector('.search-icon') &&
-      target !== nav_search                                     &&
+      target !== nav_search &&
       target !== nav_search_input
-      ) {
-        nav_elements_display()
-        scroll_enable()
-        nav_hover()
-      }
-}}
+    ) {
+      nav_elements_display()
+      scroll_enable()
+      nav_hover()
+    }
+  }
+}
 
 // nav_search_cancel_function
 function nav_search_cancel_function() {
@@ -69,11 +76,75 @@ function nav_search_cancel_function() {
     nav_elements_display()
     scroll_enable()
     nav_hover()
-  
+
     nav_search_input.querySelector('.search').blur()
   }
 }
 
+<<<<<<< HEAD
+=======
+// mobile_nav_function
+function mobile_nav_hover() {
+  mobile_nav_links.forEach(link => {
+    link.onmouseover = () => {
+      link.style.opacity = '1'
+    }
+    link.onmouseout = () => {
+      link.style.opacity = '.7'
+    }
+  })
+
+}
+// mobile_nav_tap_function
+function mobile_nav_tap() {
+  mobile_nav_links.forEach(link => {
+    link.onclick = () => {
+      link.style.opacity = '1'
+    }
+  })
+}
+
+// nav_burger_click_function
+function nav_burger_click_function() {
+  mobile_nav.classList.toggle('active')
+
+  if (mobile_nav.classList.contains('active')) {
+    nav_burger_spans[0].style.transform = 'rotate(135deg)'
+    nav_burger_spans[0].style.top = '50%'
+    nav_burger_spans[1].style.transform = 'rotate(-135deg)'
+    nav_burger_spans[1].style.top = '50%'
+
+    mobile_nav.style.height = '100vh'
+    mobile_nav.style.padding = '20px 50px'
+    mobile_nav.style.visibility = 'visible'
+
+    mobile_nav_links.forEach(link => {
+      link.style.borderBottom = '1px solid rgba(255, 255, 255, 0.3)'
+      link.style.opacity = '.7'
+    })
+    mobile_nav_input.style.opacity = '1'
+    scroll_lock()
+
+  } else {
+    nav_burger_spans[0].style.transform = 'none'
+    nav_burger_spans[0].style.top = '40%'
+    nav_burger_spans[1].style.transform = 'none'
+    nav_burger_spans[1].style.top = '60%'
+
+    mobile_nav.style.height = '0vh'
+    mobile_nav.style.padding = '0px 50px'
+    mobile_nav.style.visibility = 'hidden'
+
+    mobile_nav_links.forEach(link => {
+      link.style.borderBottom = 'none'
+      link.style.opacity = '0'
+    })
+    mobile_nav_input.style.opacity = '0'
+    scroll_enable()
+  }
+}
+
+>>>>>>> dev
 // nav_hover
 function nav_hover() {
   nav_elements.forEach(element => {
@@ -89,8 +160,17 @@ function nav_hover() {
 // nav_hover_disable
 function nav_hover_disable() {
   nav_elements.forEach(element => {
-    element.onmouseover = () => {}
-    element.onmouseout = () => {}
+    element.onmouseover = () => { }
+    element.onmouseout = () => { }
+  })
+}
+
+// nav_tap
+function nav_tap() {
+  nav_elements.forEach(element => {
+    element.onclick = () => {
+      element.style.opacity = '1'
+    }
   })
 }
 
@@ -101,7 +181,7 @@ function nav_search_click_function() {
     nav_search_click_out()
     scroll_lock()
     nav_hover_disable()
-  
+
     setTimeout(() => {
       nav_search_input.querySelector('.search').focus()
     }, 400)
@@ -110,16 +190,23 @@ function nav_search_click_function() {
 
 // scroll_lock & scroll_enable
 function scroll_lock() {
-  window.onscroll = function () {
-    window.scrollTo(0, 0)
-  }
+  document.querySelector('.container').style.height = '100vh'
+  document.querySelector('.container').style.overflow = 'hidden'
+  body.style.overflowY = 'scroll'
 }
 function scroll_enable() {
-  window.onscroll = function () {}
+  document.querySelector('.container').style.height = 'auto'
+  document.querySelector('.container').style.overflow = 'none'
+  body.style.overflowY = 'scroll'
 }
 
 // exports
+<<<<<<< HEAD
 export { 
   nav_elements_hide, nav_elements_display, nav_search_click_out, nav_hover, nav_search_click_function, nav_search_cancel_function,
   scroll_lock, scroll_enable
+=======
+export {
+  nav_elements_hide, nav_elements_display, nav_search_click_out, nav_hover, nav_search_click_function, nav_search_cancel_function, scroll_lock, scroll_enable, mobile_nav_hover, nav_burger_click_function, nav_tap, mobile_nav_tap
+>>>>>>> dev
 }
