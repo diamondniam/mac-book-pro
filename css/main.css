@@ -365,6 +365,7 @@
   background: linear-gradient(45deg, #a395fe, #deb8e3, #7147e3, #9625e2);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 .section .placeholder:nth-child(2) .mac {
   margin: 40px 0;
@@ -486,6 +487,7 @@
   background: linear-gradient(85deg, #82e23e, #fa5c19, #19913d);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 .section .placeholder:nth-child(4) .mac {
   margin: 40px 0;
@@ -499,6 +501,7 @@
   background: linear-gradient(45deg, #939393 30%, #c3c3c3, #9a9a9a);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
   font-size: 20px;
   margin: 40px 0;
   width: 70%;
